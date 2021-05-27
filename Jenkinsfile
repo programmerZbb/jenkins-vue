@@ -12,10 +12,6 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                cleanWs()
-                // We need to explicitly checkout from SCM here
-                checkout scm
-                echo "Building ${env.JOB_NAME}..."
                 sh "npm install -g yarn"
                 sh 'yarn config set registry https://registry.npm.taobao.org/'
                 sh 'yarn install'
