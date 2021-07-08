@@ -27,7 +27,8 @@ pipeline{
                 sh 'chmod +x ./scripts/*.sh'
                 sh './scripts/deploy.sh'
                 input '是否使用web网站？（点击继续）'
-                sh 'echo "deploy stage"'
+                // sh 'echo "deploy stage"'
+                sh './scripts/kill.sh'
             }
         }
     }
