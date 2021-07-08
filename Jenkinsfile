@@ -22,7 +22,7 @@ pipeline{
                 sh 'echo "deploy stage"'
             }
         }
-        stage("Deploy"){
+        // stage("Deploy"){
             // steps{
             //     sh 'ls -la'
             //     sh 'echo "deploy stage"'
@@ -33,6 +33,6 @@ pipeline{
             //     input '是否使用web网站？（点击继续）'
             //     sh 'echo "deploy stage"'
             // }
-        }
+        // }
     }
 }
