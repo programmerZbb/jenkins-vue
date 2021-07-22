@@ -1,6 +1,8 @@
-FROM node:10
+FROM nginx
 
 WORKDIR /app
+
+RUN mkdir -p /app/nginx/html
 
 # COPY . /app
 
