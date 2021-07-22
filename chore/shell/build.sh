@@ -4,4 +4,4 @@ yarn
 
 yarn build
 
-docker build -t zbb/testcicd:v1
+docker build -t zbb/testcicd:v1 .
