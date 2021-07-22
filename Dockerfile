@@ -18,5 +18,5 @@ COPY ./dist/ /app/nginx/html/
 # RUN yarn serve
 
 # 让nginx 服务卡到前台不结束，防止docker容器关闭
-CMD nginx -g "daemon off;"
-# CMD nginx
+# CMD nginx -g "daemon off;"
+CMD ll
