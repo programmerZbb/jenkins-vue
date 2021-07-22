@@ -10,4 +10,4 @@ yarn build && echo 'build 完成'
 
 docker build -t zbb/testcicd:v1 . && echo '镜像打包完成'
 
-docker run -itd --name cicd -p 8082:80 zbb/testcicd:v1 /bin/bash && echo '上线完成'
+docker run -itd --name cicd -p 8082:80 zbb/testcicd:v1 && echo '上线完成'
