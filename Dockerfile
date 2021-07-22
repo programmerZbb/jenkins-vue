@@ -2,12 +2,16 @@ FROM node:10
 
 WORKDIR /app
 
-COPY . /app
+# COPY . /app
 
-RUN yarn --registry=https://registry.npm.taobao.org
+COPY ./chore/nginx/nginx.conf /etc/nginx/nginx.conf
 
-RUN yarn
+COPY ./dist/ /app/nginx/html/
+
+# RUN yarn --registry=https://registry.npm.taobao.org
+
+# RUN yarn
 
 # RUN yarn serve
 
-CMD yarn serve
+CMD nginx -g "daemon off;"
